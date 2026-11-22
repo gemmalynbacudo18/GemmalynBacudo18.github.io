@@ -5,9 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gemmalyn Bacudo | Portfolio</title>
+
   <style>
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -26,7 +31,7 @@
 
     header h1 {
       margin: 0 0 12px;
-      font-size: 34px;
+      font-size: 36px;
     }
 
     header p {
@@ -35,22 +40,26 @@
     }
 
     main {
-      max-width: 900px;
+      max-width: 950px;
       margin: 35px auto;
       padding: 0 20px;
     }
 
     .card {
       background: white;
-      padding: 28px;
+      padding: 30px;
       border-radius: 16px;
-      margin-bottom: 22px;
+      margin-bottom: 25px;
       box-shadow: 0 5px 20px rgba(30, 58, 138, 0.08);
     }
 
     h2 {
       color: #1e40af;
       margin-top: 0;
+    }
+
+    h3 {
+      color: #1e293b;
     }
 
     p {
@@ -66,11 +75,18 @@
 
     .feature {
       background: #eff6ff;
-      padding: 15px;
+      padding: 17px;
       border-radius: 10px;
       color: #1e40af;
       font-weight: bold;
       text-align: center;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
     }
 
     .button {
@@ -81,11 +97,31 @@
       padding: 14px 24px;
       border-radius: 10px;
       font-weight: bold;
-      margin-top: 12px;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
     }
 
     .button:hover {
       background: #1d4ed8;
+    }
+
+    .button-secondary {
+      background: #0f766e;
+    }
+
+    .button-secondary:hover {
+      background: #115e59;
+    }
+
+    .note {
+      background: #eff6ff;
+      padding: 15px;
+      border-left: 4px solid #2563eb;
+      border-radius: 8px;
+      margin-top: 20px;
+      font-size: 14px;
     }
 
     footer {
@@ -95,8 +131,23 @@
       padding: 22px;
       margin-top: 40px;
     }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 28px;
+      }
+
+      .card {
+        padding: 22px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -106,6 +157,7 @@
   </header>
 
   <main>
+
     <section class="card">
       <h2>About Me</h2>
       <p>
@@ -117,39 +169,88 @@
 
     <section class="card">
       <h2>My Project</h2>
+
       <h3>School Event Check-In System</h3>
+
       <p>
-        A Flutter mobile application designed to help
-        school organizers manage events, register attendees,
-        and monitor attendance records efficiently.
+        The School Event Check-In System is a Flutter
+        application designed to help school organizers
+        manage events, register attendees, and monitor
+        attendance records efficiently.
+      </p>
+
+      <p>
+        The system provides a simple and organized way
+        to manage school event participation through
+        a digital check-in process.
       </p>
 
       <h2>Project Features</h2>
+
       <div class="features">
         <div class="feature">Organizer Login</div>
         <div class="feature">Dashboard</div>
         <div class="feature">Create Events</div>
         <div class="feature">Guest Check-In</div>
         <div class="feature">Attendance Records</div>
+        <div class="feature">Duplicate Prevention</div>
         <div class="feature">Supabase Database</div>
+        <div class="feature">Logout</div>
       </div>
 
-      <h2 style="margin-top: 28px;">Technologies Used</h2>
-      <p>Flutter, Dart, Supabase, VS Code, Git and GitHub</p>
+      <h2 style="margin-top: 28px;">
+        Technologies Used
+      </h2>
 
-      <a class="button"
-         href="https://github.com/gemmalynbacudo18/GemmalynBacudo.github.io"
-         target="_blank"
-         rel="noopener noreferrer">
-        View GitHub Repository
-      </a>
+      <p>
+        Flutter, Dart, Supabase, Visual Studio Code,
+        Git, and GitHub
+      </p>
+
+      <h2>Project Links</h2>
+
+      <div class="buttons">
+
+        <a
+          class="button"
+          href="https://github.com/gemmalynbacudo18/GemmalynBacudo.github.io"
+          target="_blank"
+          rel="noopener noreferrer">
+          View GitHub Repository
+        </a>
+
+        <button
+          class="button button-secondary"
+          type="button"
+          onclick="launchApp()">
+          Launch Application
+        </button>
+
+      </div>
+
+      <div class="note">
+        <strong>Note:</strong>
+        The Launch Application button will become
+        available once the Flutter web application
+        has been successfully deployed.
+      </div>
+
     </section>
+
   </main>
 
   <footer>
     <p>Gemmalyn Bacudo | BSIT 2A</p>
     <p>School Event Check-In System</p>
   </footer>
+
+  <script>
+    function launchApp() {
+      alert(
+        "The School Event Check-In application is not deployed yet. Please check back soon."
+      );
+    }
+  </script>
 
 </body>
 </html>
